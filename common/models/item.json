@@ -1,0 +1,35 @@
+{
+  "name": "item",
+  "plural": "items",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 0
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "price": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "list": {
+      "type": "belongsTo",
+      "model": "list",
+      "foreignKey": "listId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
